@@ -1,0 +1,72 @@
+@container_width: 940px;
+//-------- Helpers --------
+.rounded-corners (@radius: 5px) {
+    border-radius: @radius;
+    -webkit-border-radius: @radius;
+    -moz-border-radius: @radius;
+}
+
+.shadow {
+    -moz-box-shadow: 3px 3px 3px 1px #CCC;
+    -webkit-box-shadow: 3px 3px 3px 1px #CCC;
+    box-shadow: 3px 3px 3px 1px #CCC;
+}
+
+//-------- Header --------
+@header_bgcolor: #EB593C;
+@header_color: #FFF;
+@header_height: 50px;
+@header_margin: 0 0 10px 0;
+.header () {
+    .shadow;
+
+    background-color: @header_bgcolor;
+    height: @header_height;
+    line-height: @header_height;
+    color: @header_color;
+    min-width: @container_width;
+    margin: @header_margin;
+}
+
+//-------- Logo --------
+@logo_bgcolor: #392A27;
+@logo_color: #EEE;
+@logo_size: 18px;
+@logo_padding: 5px 12px 5px 5px;
+.logo () {
+    .rounded-corners;
+
+    font-family: 'Droid Sans', sans-serif;
+    padding: @logo_padding;
+    font-weight: normal;
+    background-color: @logo_bgcolor;
+    color: @logo_color;
+    line-height: @header_height;
+}
+
+//-------- Moto ------
+@moto_size: 15px;
+@moto_font: Prociono, serif;
+@moto_color: #FFF;
+.moto () {
+    font-size: @moto_size;
+    font-family: @moto_font;
+    margin-top: 7px;
+    color: @moto_color;
+}
+
+//-------- DOM Structure --------
+#header {
+    .header;
+}
+
+#logo {
+    font-size: @logo_size;
+    a {
+        .logo;
+    }
+}
+
+#moto {
+    .moto;
+}
