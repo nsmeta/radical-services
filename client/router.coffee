@@ -5,7 +5,7 @@ Workspace = Backbone.Router.extend
         allowedPages = ['letsOrganize!', 'help']
         pageIsAllowed = page in allowedPages
         page = allowedPages[0] unless pageIsAllowed
-        Router.navigate page
+        Router.navigate page, trigger: no, replace: true
         Session.set 'currentPage', page
 
 Router = new Workspace
