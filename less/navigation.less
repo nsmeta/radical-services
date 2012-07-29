@@ -1,0 +1,26 @@
+.rounded-corners (@radius: 5px) {
+    border-radius: @radius;
+    -webkit-border-radius: @radius;
+    -moz-border-radius: @radius;
+}
+
+#navigation {
+    margin-top: 14px;
+
+    a {
+        color: #FCE5E1;
+        font-weight: bold;
+        &:hover {
+            color: #FFF;
+            background-color: #333;
+        }
+    }
+}
+
+.nav-pills > li > a {
+    background-color: #4F3834;
+}
+.nav-pills > .active > a, .nav-pills > .active > a:hover {
+    color: #FFF !important;
+    background-color: #333;
+}

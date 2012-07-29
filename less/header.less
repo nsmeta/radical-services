@@ -6,10 +6,10 @@
     -moz-border-radius: @radius;
 }
 
-.shadow {
-    -moz-box-shadow: 3px 3px 3px 1px #CCC;
-    -webkit-box-shadow: 3px 3px 3px 1px #CCC;
-    box-shadow: 3px 3px 3px 1px #CCC;
+.shadow (@a: 0, @b: 3px, @c: 3px, @d: 1px)  {
+    -moz-box-shadow: @arguments #CCC;
+    -webkit-box-shadow: @arguments #CCC;
+    box-shadow: @arguments #CCC;
 }
 
 //-------- Header --------
@@ -64,6 +64,7 @@
     font-size: @logo_size;
     a {
         .logo;
+        text-decoration: none;
     }
 }
 

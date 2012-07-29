@@ -1,12 +1,13 @@
 Workspace = Backbone.Router.extend
     routes:
-        'about': 'about',
-        'login': 'login'
-    about: ->
-        console.log 'about page'
-    login: ->
-        console.log 'login page'
+        '*page': 'setCurrentPage'
+    setCurrentPage: (page) ->
+        allowedPages = ['letsOrganize!', 'help']
+        pageIsAllowed = page in allowedPages
+        page = allowedPages[0] unless pageIsAllowed
+        Router.navigate page
+        Session.set 'currentPage', page
 
+Router = new Workspace
 Meteor.startup ->
-    Router = new Workspace
     Backbone.history.start pushState: true

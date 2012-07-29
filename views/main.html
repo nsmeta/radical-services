@@ -4,23 +4,10 @@
 </head>
 
 <body>
-    <div id="header">
-        <div class="container">
-            <div class="row">
-                <h1 id="logo" class="span3">
-                    <a href="/">: Radical Services</a>
-                </h1>
-                <small id="moto" class="span9">
-                    Mutual Aid for a Better World
-                </small>
-            </div>
-        </div>
-    </div>
+    {{> header}}
 
     <div class="container">
-        <a href="/about">About</a><br />
-        <a href="/search/acab">Search</a><br />
+        {{> tmpl_loader}}
     </div>
-
 
 </body>
