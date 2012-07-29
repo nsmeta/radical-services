@@ -5,8 +5,25 @@
                 <h1 id="logo" class="span3">
                     <a href="/">: Radical Services</a>
                 </h1>
-                {{> navigation}}
+                <div class="span3">
+                    {{> navigation}}
+                </div>
+                <div class="span6">
+                    {{> account}}
+                </div>
             </div>
         </div>
     </div>
+</template>
+
+
+<template name="account">
+    <form id="account" class="form-inline">
+        <input type="email" placeholder="Email" id="email" />
+        <input type="password" class="input-small" placeholder="Password" />
+        <button type="submit" class="btn btn-small">
+            <i class="icon-user"></i>
+            Sign in
+        </button>
+    </form>
 </template>
