@@ -3,32 +3,39 @@
     -webkit-border-radius: @radius;
     -moz-border-radius: @radius;
 }
-
 #navigation {
-    margin-top: 14px;
+    list-style-type: none;
 
     a {
         font-weight: bold;
-        color: #FFF;
-        &:hover {
-            opacity: 1.0;
-            color: #E0E0E0;
-            background-color: #333;
+    }
+    li {
+        display: block;
+        float: left;
+        //border-left: 1px solid #CCC;
+        //border-bottom: 1px solid #CCC;
+        &.active {
+            background-color: #DA482B;
+            border-bottom: 2px solid #08C;
+
+            a {
+                color: white;
+            }
+        }
+        a {
+            float: none;
+            padding-left: 10px;
+            padding-right: 10px;
+            padding-top: 17px;
+            padding-bottom: 17px;
+            line-height: 49px;
+            text-decoration: none;
+            color: #DDD;
+
+            &:hover {
+                color: white;
+                text-decoration: none;
+            }
         }
     }
-}
-
-.nav-pills > li > a {
-    background-color: #333;
-    opacity: 0.85;
-}
-.nav-pills > .active > a, .nav-pills > .active > a:hover {
-    //.rounded-corners(0);
-    height: 13px;
-    border-top: 2px solid #38c;
-    color: #EEE !important;
-    opacity: 1.0;
-    background-color: #333;
-    //border-top: 2px solid #08c;
-    //border-bottom: 2px solid #38c;
 }

@@ -6,6 +6,15 @@
     -moz-border-radius: @radius;
 }
 
+.gradient (@from: #EB593C, @to: #D64427) {
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(@from), to(@to));
+    background-image: -webkit-linear-gradient(top, @from, @to);
+    background-image: -moz-linear-gradient(top, @from, @to);
+    background-image: -ms-linear-gradient(top, @from, @to);
+    background-image: -o-linear-gradient(top, @from, @to);
+    background-image: linear-gradient(top, @from, @to);
+}
+
 .shadow (@a: 0, @b: 3px, @c: 3px, @d: 1px)  {
     -moz-box-shadow: @arguments #CCC;
     -webkit-box-shadow: @arguments #CCC;
@@ -19,7 +28,7 @@
 @header_margin: 0 0 10px 0;
 .header () {
     .shadow;
-
+    .gradient;
     background-color: @header_bgcolor;
     height: @header_height;
     line-height: @header_height;

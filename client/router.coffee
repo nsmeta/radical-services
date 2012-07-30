@@ -2,7 +2,7 @@ Workspace = Backbone.Router.extend
     routes:
         '*page': 'setCurrentPage'
     setCurrentPage: (page) ->
-        allowedPages = ['letsOrganize!', 'help']
+        allowedPages = ['organize!', 'services', 'groups']
         pageIsAllowed = page in allowedPages
         page = allowedPages[0] unless pageIsAllowed
         Router.navigate page, trigger: no, replace: true

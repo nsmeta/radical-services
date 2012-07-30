@@ -5,14 +5,19 @@ Template.navigation.isActive = (pageName) ->
 Template.navigation.pages = ->
     [
         {
-            url: '/letsOrganize!'
-            title: "Let's Organize!"
-            is_active: Template.navigation.isActive("letsOrganize!")
+            url: '/organize!'
+            title: "Organize!"
+            is_active: Template.navigation.isActive("organize!")
         }
         {
-            url: '/help'
-            title: 'Help!'
-            is_active: Template.navigation.isActive("help")
+            url: '/services'
+            title: 'Services'
+            is_active: Template.navigation.isActive("services")
+        }
+        {
+            url: '/groups'
+            title: 'Groups'
+            is_active: Template.navigation.isActive("groups")
         }
     ]
 
