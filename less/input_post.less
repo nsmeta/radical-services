@@ -1,0 +1,42 @@
+.rounded-corners (@radius: 5px) {
+    border-radius: @radius;
+    -webkit-border-radius: @radius;
+    -moz-border-radius: @radius;
+}
+
+.login-form {
+    background-image: url('/images/bg.png');
+    background-repeat: repeat-all;
+    .rounded-corners;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #E3E3E3;
+
+    .signup {
+         .row {
+            margin-top: 5px;
+        }
+    }
+
+    h1 {
+        font-size: 16px;
+        width: 181px;
+        height: 32px;
+        border-bottom: 1px dashed #AAA;
+        margin-bottom: 6px;
+    }
+
+    #login-info {
+        line-height: 43px;
+        font-weight: normal;
+    }
+
+    form {
+        .label {
+            margin-bottom: 5px;
+        }
+    }
+}
+
+

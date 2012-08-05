@@ -1,4 +1,24 @@
 <template name="organize">
+    {{> organize_post}}
+    {{> organize_message}}
+</template>
+
+<template name="organize_post">
+    <div class="row">
+        <div class="span8">
+            <div id="organize-post" class="input-post">
+                {{#if currentUser}}
+                    Message Form
+                {{else}}
+                    {{> login_form}}
+                {{/if}}
+            </div>
+        </div>
+        <div class="span4">SIDEBAR</div>
+    </div>
+</template>
+
+<template name="organize_message">
     <div class="row">
         <div class="well span7">
             <div class="row section">

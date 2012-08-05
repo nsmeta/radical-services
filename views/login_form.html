@@ -1,0 +1,89 @@
+<template name="login_form">
+    <div class="row">
+        <div class="span8">
+            <form class="login-form form-inline" id="login-{{currentPage}}">
+                <div class="row">
+                    <div class="span4">
+                        <h1>Sign in / Sign up</h1>
+                    </div>
+                    <div class="span3">
+                        {{> login_form_info}}
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="span4">
+                        <input type="text" class="input-xlarge"
+                            name="username"
+                            autofocus="autofocus"
+                            placeholder="Your Username" />
+                    </div>
+                    <div class="span3">
+                        <input type="password" class="input-xlarge"
+                            name="password"
+                            placeholder="Password" />
+                    </div>
+                </div>
+                <div class="signup">
+                    <div class="row">
+                        <div class="span4 offset4">
+                            {{> login_form_pass}}
+                            {{> login_form_button}}
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</template>
+
+<template name="login_form_info">
+    {{#if errorLevel_is "none"}}
+    <span id="login-info" class="label label-info">
+        {{#if userEmpty}}
+            Use the form below to either sign in or sign up.
+        {{else}}
+            {{#if userExists}}
+            Welcome, Comrade! Please sign in to continue.
+            {{else}}
+            You're not a member yet. Please sign up.
+            {{/if}}
+        {{/if}}
+    </span>
+    {{else}}
+    <span id="login-info" class="label label-important">
+        Warning: {{errorLevel}}
+    </span>
+    {{/if}}
+</template>
+
+<template name="login_form_button">
+    <button type="submit" class="btn btn-inverse">
+        {{#if userEmpty}}
+            Sign in
+        {{else}}
+            {{#if userExists}}
+            Sign in
+            {{else}}
+            Sign up
+            {{/if}}
+        {{/if}}
+    </button>
+</template>
+
+<template name="login_form_pass">
+    {{#if userEmpty}}
+        <input type="password" disabled="disabled" class="input-large"
+            name="vpassword"
+            placeholder="Verify Password" />
+    {{else}}
+        {{#if userExists}}
+        <input type="password" disabled="disabled" class="input-large"
+            name="vpassword"
+            placeholder="Verify Password" />
+        {{else}}
+        <input type="password" class="input-large"
+            name="vpassword"
+            placeholder="Verify Password" />
+        {{/if}}
+    {{/if}}
+</template>
