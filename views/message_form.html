@@ -40,11 +40,49 @@
                     </div>
                     <div class="control-group">
                         <label class="control-label"
+                               for="orgform-title">Activity Type</label>
+                        <div class="controls">
+                            <label class="radio">
+                                <input
+                                    type="radio"
+                                    name="orgform-type"
+                                    checked="checked" />
+                                General Activity
+                                <i>
+                                    (e.g.: organize a cafe, bookfair or a protest).
+                                </i>
+                            </label>
+                            <label class="radio">
+                                <input
+                                    type="radio"
+                                    name="orgform-type" />
+                                Seeking Help
+                                <i>
+                                    (e.g.: you need help to fix your computer).
+                                </i>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <label class="control-label"
                                for="orgform-desc">Description</label>
                         <div class="controls">
                             <textarea
                                 id="orgform-desc"
                                 class="input-xlarge"></textarea>
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <label class="control-label"
+                               for="orgform-groups">Groups</label>
+                        <div class="controls">
+                            <input type="text"
+                                   rel="tooltip"
+                                   data-trigger="focus"
+                                   data-title="Hello"
+                                   class="input-xlarge"
+                                   placeholder="Activity Title"
+                                   id="orgform-groups" />
                         </div>
                     </div>
                     <div class="control-group">
@@ -64,15 +102,21 @@
                                         Location
                                     </a>
                                 </li>
+                                <li>
+                                    <a href="#" id="add-pics">
+                                        <i class="icon-camera"></i>
+                                        Pictures
+                                    </a>
+                                </li>
                             </ul>
                         </div>
                     </div>
                     <div class="control-group">
                         <div class="controls">
                             <button
-                                class="btn btn-primary"
+                                class="btn btn-large btn-primary"
                                 type="submit">
-                                Create activity
+                                Organize!
                             </button>
                             <button
                                 type="reset"

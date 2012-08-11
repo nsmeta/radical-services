@@ -1,3 +1,8 @@
+Meteor.startup ->
+    $document = $(document)
+    $document.tooltip
+        selector: '[rel=tooltip]'
+
 Template.message_form.creatingEvent = ->
     creatingEvent = Session.get 'creatingEvent'
     creatingEvent or= no
