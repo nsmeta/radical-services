@@ -8,7 +8,7 @@
         <div class="span8">
             <div id="organize-post" class="input-post">
                 {{#if currentUser}}
-                    Message Form
+                    {{> message_form}}
                 {{else}}
                     {{> login_form}}
                 {{/if}}
