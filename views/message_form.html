@@ -1,6 +1,9 @@
 <head>
     <script type="text/javascript" src="/lib/jquery.autosize-min.js">
     </script>
+    <script type="text/javascript" src="/lib/chosen/chosen.jquery.min.js">
+    </script>
+    <link rel="stylesheet" type="text/css" href="/lib/chosen/chosen.css" />
 </head>
 
 <template name="message_form">
@@ -76,13 +79,17 @@
                         <label class="control-label"
                                for="orgform-groups">Groups</label>
                         <div class="controls">
-                            <input type="text"
-                                   rel="tooltip"
-                                   data-trigger="focus"
-                                   data-title="Hello"
-                                   class="input-xlarge"
-                                   placeholder="Activity Title"
-                                   id="orgform-groups" />
+                            <select
+                                id="orgform-groups"
+                                class="input-xlarge"
+                                data-placeholder="Choose groups" multiple>
+                                <option value="Seomra Spaoi">
+                                Seomra Spraoi
+                                </option>
+                                <option value="Vegans">
+                                Vegans
+                                </option>
+                            </select>
                         </div>
                     </div>
                     <div class="control-group">
@@ -108,6 +115,18 @@
                                         Pictures
                                     </a>
                                 </li>
+                                <li>
+                                    <a href="#" id="add-todo">
+                                        <i class="icon-th-list"></i>
+                                        Todo List
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" id="add-voting">
+                                        <i class="icon-thumbs-up"></i>
+                                        Vote
+                                    </a>
+                                </li>
                             </ul>
                         </div>
                     </div>
@@ -130,4 +149,5 @@
         </div>
     </div>
 </div>
+{{init_template}}
 </template>

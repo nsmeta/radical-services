@@ -11,11 +11,12 @@ Template.message_form.creatingEvent = ->
 closeCreatingEvent = ->
     Session.set 'creatingEvent', no
 
+Template.message_create.init_template = ->
+    Meteor.defer ->
+        $('#orgform-desc').autosize()
+        $('#orgform-groups').chosen()
 Template.message_create.events =
     'click .close': closeCreatingEvent
     'reset form': closeCreatingEvent
-    'focus #orgform-desc': (e) ->
-        $this = $(e.target)
-        $this.autosize()
 Template.message_start.events =
     'click #organize-message': -> Session.set 'creatingEvent', yes
